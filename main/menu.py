@@ -28,9 +28,8 @@ class Menu:
             elif choice == '3':
                 os.system('cls')
                 logo = Logo()
-                logo.clr()
                 logo.print_logo()
-                print("Exiting game...")
+                os._exit(0)
                 break
             else:
                 print("Invalid choice, please try again.")
@@ -99,7 +98,7 @@ class Menu:
                 return password
             else:
                 print("Password must be at least 6 characters long, contain only alphanumeric characters, and include at least one uppercase letter. Please try again.")
-                time.sleep(0.5)
+                time.sleep(2)
                 os.system('cls')
 
     def create_new_account(self, username):
